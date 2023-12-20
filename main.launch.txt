@@ -1,0 +1,7 @@
+<launch>
+    <node pkg="turtlesim" name="turtle" type="turtlesim_node" />
+    <node pkg="turtle_time" name="mynode" type="main_draw" />
+    <node pkg="turtle_time" name="listener" type="turtle_time_listener" output="screen"/>
+</launch>
+
+

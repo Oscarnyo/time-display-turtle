@@ -1,0 +1,36 @@
+#!/usr/bin/env pythonS
+import rospy
+from turtlesim.msg import Pose
+from std_msgs.msg import String
+    
+def turtle_hour_tens(data):
+    if data.linear_velocity != 0 or data.angular_velocity != 0:
+        rospy.loginfo(rospy.get_caller_id() + "\n %s", "Name: turtle_hour_tens/pose\n X_pos: {}\n Y_pos: {}\n Theta: {}\n Linear: {} \n Angular: {}".format(data.x, data.y, data.theta, data.linear_velocity, data.angular_velocity))
+
+def turtle_hour_ones(data):
+    if data.linear_velocity != 0 or data.angular_velocity != 0:
+        rospy.loginfo(rospy.get_caller_id() + "\n %s", "Name: turtle_hour_ones/pose\n X_pos: {}\n Y_pos: {}\n Theta: {}\n Linear: {} \n Angular: {}".format(data.x, data.y, data.theta, data.linear_velocity, data.angular_velocity))
+    
+def turtle_minute_tens(data):
+    if data.linear_velocity != 0 or data.angular_velocity != 0:
+        rospy.loginfo(rospy.get_caller_id() + "\n %s", "Name: turtle_minute_tens/pose\n X_pos: {}\n Y_pos: {}\n Theta: {}\n Linear: {} \n Angular: {}".format(data.x, data.y, data.theta, data.linear_velocity, data.angular_velocity))
+    
+def turtle_minute_ones(data):
+    if data.linear_velocity != 0 or data.angular_velocity != 0:
+        rospy.loginfo(rospy.get_caller_id() + "\n %s", "Name: turtle_minute_ones/pose\n X_pos: {}\n Y_pos: {}\n Theta: {}\n Linear: {} \n Angular: {}".format(data.x, data.y, data.theta, data.linear_velocity, data.angular_velocity))
+
+def listener():
+    rospy.init_node('listener', anonymous=True)
+    
+    rospy.Subscriber("turtle_hour_tens/pose", Pose, turtle_hour_tens)
+    rospy.Subscriber("turtle_hour_ones/pose", Pose, turtle_hour_ones)
+    rospy.Subscriber("turtle_minute_tens/pose", Pose, turtle_minute_tens)
+    rospy.Subscriber("turtle_minute_ones/pose", Pose, turtle_minute_ones)
+        
+    rospy.spin()
+    
+if __name__ == '__main__':
+    try:
+        listener()
+    except rospy.ROSInterruptException:
+        pass

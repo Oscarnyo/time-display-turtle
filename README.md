@@ -30,6 +30,6 @@ Feel free to fork this repository and submit pull requests to contribute to this
 
 ## Acknowledgements
 Special thanks to Soon Wei, Hao Jie, and Jun Ting for their guidance and support in this project.
-Soowei: https://github.com/SwS651
-Hao Jie: https://github.com/Mito8888
-Jun Ting: https://github.com/Chen08-16
+- Soowei: https://github.com/SwS651
+- Hao Jie: https://github.com/Mito8888
+- Jun Ting: https://github.com/Chen08-16

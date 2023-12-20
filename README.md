@@ -27,6 +27,3 @@ To run the time display:
 
 ## Contributing
 Feel free to fork this repository and submit pull requests to contribute to this project.
-
-## License
-This project is licensed under [Your License Name].
